@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Wehther App</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row main">
+        <div class="col-6 col-left">
+          <div class="row rowleft-1">
+            <div class="col-3 cities">London</div>
+            <div class="col-3 cities">New York</div>
+            <div class="col-3 cities">Paris</div>
+            <div class="col-3 cities">Berlin</div>
+          </div>
+          <div class="rowleft-2">
+            <div class="col">
+              <form id="search-form">
+                <input
+                  class="search width"
+                  type="search"
+                  placeholder="Enter name of the city"
+                  id="cityInput"
+                  autocomplete="off"
+                  autofocus="on"
+                />
+                <input class="search" type="submit" value="Search" />
+                <button class="search" id="current-location">current</button>
+              </form>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6 rowleft-2">
+              <div class="row city">
+                <h2 id="city">Tehran</h2>
+              </div>
+              <div class="row city" id="currentDay"></div>
+              <div class="row citywhether" id="description">Sunny</div>
+              <div class="row city">Updated 5 mins ago</div>
+            </div>
+            <div class="col-6 rowleft-3">
+              <!--<div class="row sun">☀️</div>-->
+              <div class="row degree" id="temperature">40</div>
+              <div class="row degree">
+                <!-- <a href="#" id="celsius-link">-->°C<!-- </a>-->
+              </div>
+              <div class="row degree">
+                <!--  <a href="#" id="fahrenheit-link">°F</a>-->
+              </div>
+              <div class="row">
+                <!-- <div class="col degreeMax">42°C/107.6°F</div>
+                <div class="col degreeMin">35°C/95°F</div>-->
+              </div>
+            </div>
+          </div>
+          <div class="row rowleft-2 today">
+            <!-- Precipitation: 10%
+            <br />-->
+            Wind: <span id="wind">4</span> Km/h
+            <br />
+            Humidity:<span id="humidity">5</span> %
+          </div>
+        </div>
+        <div class="col-3 col-right">
+          <div class="row next">In the Next Five Days:</div>
+          <div class="row">
+            <div class="col-4 days">Sat.</div>
+            <div class="col-4 daysDeg sat">
+              <h1>20 °C</h1>
+              21/18°C
+            </div>
+            <div class="col-4 sunny">☀️</div>
+          </div>
+          <div class="row">
+            <div class="col-4 days">Sun.</div>
+            <div class="col-4 daysDeg sund">
+              <h1>15 °C</h1>
+              17/10°C
+            </div>
+            <div class="col-4 cloud-sun">⛅</div>
+          </div>
+          <div class="row">
+            <div class="col-4 days">Mon.</div>
+            <div class="col-4 daysDeg mon">
+              <h1>5 °C</h1>
+              6/2°C
+            </div>
+            <div class="col-4 cloudy">☁️</div>
+          </div>
+          <div class="row">
+            <div class="col-4 days">Tue.</div>
+            <div class="col-4 daysDeg tue">
+              <h1>0 °C</h1>
+              2/-3°C
+            </div>
+            <div class="col-4 cloudy">⛈️</div>
+          </div>
+          <div class="row">
+            <div class="col-4 days">Wed.</div>
+            <div class="col-4 daysDeg wed">
+              <h1>-5 °C</h1>
+              -4/-10°C
+            </div>
+            <div class="col-4 snowy">❄️</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/script.js"></script>
+  </body>
+</html>
