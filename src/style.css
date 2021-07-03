@@ -194,3 +194,10 @@ body {
   font-family: "Roboto", sans-serif;
   padding: 0%;
 }
+.bottom-line {
+  color: black;
+  text-align: left;
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+  padding: 0%;
+}
