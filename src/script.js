@@ -39,6 +39,16 @@ function showTemp(response) {
   );
   document.querySelector("#description").innerHTML =
     response.data.weather[0].main;
+
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].main);
+
+  //let timeElement = document.querySelector("#currentDay");
+  //timeElement.innerHTML = formatDate(response.data.dt * 1000);
 }
 function search(city) {
   let apiKey = "9e426d3dc7d76c6df8a50964d68d9730";
@@ -73,6 +83,8 @@ function getCurrentLocation(event) {
 function convertToFahrenheit(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
   let farenheitTemperature = (celsuisTemp * 9) / 5 + 32;
   temperatureElement.innerHTML = Math.round(farenheitTemperature);
 }
@@ -80,11 +92,13 @@ function convertToFahrenheit(event) {
 function convertToCelsius(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
   temperatureElement.innerHTML = Math.round(celsuisTemp);
 }
 //feature 1
 let day = document.querySelector("#currentDay");
-console.log(day);
+//console.log(day);
 let current = new Date();
 day.innerHTML = formatDate(current);
 

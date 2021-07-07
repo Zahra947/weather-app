@@ -72,10 +72,8 @@ body {
   width: 60%;
 }
 
-.sun {
-  color: #feed30;
-  font-size: 80px;
-  font-family: "Roboto", sans-serif;
+.icon {
+  font-size: 30px;
   display: block;
   text-align: center;
   margin: 0%;
@@ -89,9 +87,10 @@ body {
   display: block;
   text-align: center;
   margin: 0%;
-  color: #cc0500;
+  color: black;
   border: 1px solid #fae3e3;
   border-radius: 5%;
+  text-decoration: none;
 }
 .degreeMax {
   font-size: 16px;
@@ -200,4 +199,12 @@ body {
   font-size: 18px;
   font-family: "Roboto", sans-serif;
   padding: 0%;
+}
+.degree .active {
+  color: black;
+  text-decoration: none;
+  cursor: default;
+}
+.degree .active:hover {
+  text-decoration: none;
 }
