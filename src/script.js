@@ -80,7 +80,7 @@ function convertToFahrenheit(event) {
 function convertToCelsius(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round(celsuis);
+  temperatureElement.innerHTML = Math.round(celsuisTemp);
 }
 //feature 1
 let day = document.querySelector("#currentDay");
