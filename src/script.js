@@ -30,6 +30,9 @@ function showTemp(response) {
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
   );
+
+  celsuisTemp = response.data.main.temp;
+
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
@@ -70,32 +73,35 @@ function getCurrentLocation(event) {
 function convertToFahrenheit(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = 104;
+  let farenheitTemperature = (celsuisTemp * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(farenheitTemperature);
 }
 
 function convertToCelsius(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = 40;
+  temperatureElement.innerHTML = celsuis;
 }
 //feature 1
 let day = document.querySelector("#currentDay");
 console.log(day);
 let current = new Date();
 day.innerHTML = formatDate(current);
-//feature 2
 
+//feature 2
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
 //feature 3
-//let fahrenheitLink = document.querySelector("#fahrenheit-link");
-//fahrenheitLink.addEventListener("click", convertToFahrenheit);
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", convertToFahrenheit);
 
-//let celsiusLink = document.querySelector("#celsius-link");
-//celsiusLink.addEventListener("click", convertToCelsius);
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", convertToCelsius);
 
 //real weather
 let currentLocationButton = document.querySelector("#current-location");
 currentLocationButton.addEventListener("click", getCurrentLocation);
+
+let celsuisTemp = null;
 search("Tehran");
