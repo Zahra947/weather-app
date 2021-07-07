@@ -61,7 +61,7 @@ function searchLocation(position) {
   debugger;
   let apiKey = "9e426d3dc7d76c6df8a50964d68d9730";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
-  console.log(apiUrl);
+  //console.log(apiUrl);
   axios.get(apiUrl).then(showTemp);
 }
 
@@ -80,7 +80,7 @@ function convertToFahrenheit(event) {
 function convertToCelsius(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = celsuis;
+  temperatureElement.innerHTML = Math.round(celsuis);
 }
 //feature 1
 let day = document.querySelector("#currentDay");
