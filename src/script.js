@@ -36,22 +36,24 @@ function displayForecast(response) {
   let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
 
-  let forecastHTML = `<div class="col>"`;
+  let forecastHTML = `<div class="col">`;
   forecast.forEach(function (forecastDay, index) {
-    if (index < 6) {
+    if (index < 5) {
       forecastHTML =
         forecastHTML +
         `<div class="row" id="forecast">
             <div class="col-4 days">${nextDays(forecastDay.dt)}</div>
             <div class="col-4 daysDeg sat">
               <h1>20 °C</h1>
-              <span>${Math.round(
+              <span class="max">${Math.round(
                 forecastDay.temp.max
-              )}</span>/<span>${Math.round(forecastDay.temp.min)}</span>°C
+              )}</span>/<span class="min">${Math.round(
+          forecastDay.temp.min
+        )}</span>°C
             </div>
             <div class="col-4"> <img src="http://openweathermap.org/img/wn/${
               forecastDay.weather[0].icon
-            }@2x.png" alt="" class="icon" id="icon" /></div>
+            }@2x.png" alt="" class="sunny" id="icon"/></div>
           </div>`;
     }
   });

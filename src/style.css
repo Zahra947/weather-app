@@ -3,28 +3,34 @@ h1 {
   font-family: "Roboto", sans-serif;
 }
 body {
-  margin: 5% auto;
+  margin: 0% auto;
   font-family: "Roboto", sans-serif;
+  background-color: #ebf0f6;
 }
 .main {
   padding: 0%;
   margin: 5% auto;
   text-align: center;
+  flex: none;
 }
 .col-left {
-  border: 1px solid #9f1e49;
+  border: 1px solid #ebf0f6;
   border-radius: 5%;
+  background-color: #f7f7f7;
 }
 
+.row {
+  justify-content: center;
+}
 .rowleft-1 {
   margin: 1%;
 }
 .rowleft-2 {
-  border: 1px solid #fae3e3;
-  border-radius: 5%;
+  border: 1px solid #ebf0f6;
+  border-radius: 8%;
 }
 .rowleft-3 {
-  border: 1px solid #fae3e3;
+  border: 1px solid #ebf0f6;
   border-radius: 5%;
 }
 
@@ -32,36 +38,36 @@ body {
   font-size: 18px;
   font-weight: bold;
   font-family: "Roboto", sans-serif;
-  border: 1px solid #fae3e3;
+  border: 1px solid #ebf0f6;
   border-radius: 5%;
   padding: 10px;
   display: block;
   text-align: center;
   margin: 2%;
-  color: #b7569a;
-  background: #fae3e3;
+  color: #00587a;
+  background-color: #fdffcd;
 }
 .citywhether {
-  color: #de703c;
+  color: #00587a;
   font-size: 18px;
   font-weight: bold;
   font-family: "Roboto", sans-serif;
   display: block;
   text-align: center;
-  border: 1px solid #fffe9a;
+  border: 1px solid #ebf0f6;
   padding: 10px;
   margin: 2%;
   border-radius: 5%;
-  background: #fffe9a;
+  background-color: #fdffcd;
 }
 .search {
   font-size: 18px;
   font-family: "Roboto", sans-serif;
   margin: 1%;
-  color: #c3195d;
-  background: #ffd5be;
+  color: #00587a;
+  background-color: #fdffcd;
   text-align: center;
-  border: 1px solid #c3195d;
+  border: 1px solid #ebf0f6;
 }
 .width {
   width: 60%;
@@ -71,7 +77,8 @@ body {
   display: block;
   margin: 0% auto;
   width: 200px;
-  border: 1px solid #fae3e3;
+  border: 1px solid #ebf0f6;
+  background-color: #d9f2ff;
   border-radius: 5%;
 }
 .degree {
@@ -81,40 +88,30 @@ body {
   display: block;
   text-align: center;
   margin: 0%;
-  color: #b7569a;
-  border: 1px solid #fae3e3;
+  color: #00587a;
+  border: 1px solid #ebf0f6;
   border-radius: 5%;
   text-decoration: none;
 }
-.degreeMax {
-  font-size: 16px;
-  font-weight: bold;
-  font-family: "Roboto", sans-serif;
-  display: block;
-  text-align: center;
-  margin: 0%;
-  color: #cc0500;
-  border: 1px solid #fae3e3;
-  border-radius: 5%;
+.max {
+  margin: 5% 0%;
+  color: #00587a;
+  padding: 0%;
 }
-.degreeMin {
-  font-size: 16px;
-  font-weight: bold;
-  font-family: "Roboto", sans-serif;
-  display: block;
-  text-align: center;
-  margin: 0%;
-  color: #686ee2;
-  border: 1px solid #fae3e3;
-  border-radius: 5%;
+.min {
+  margin: 5% 0%;
+  color: #00587a;
+  padding: 0%;
+  opacity: 0.6;
 }
 
 .col-right {
-  border: 1px solid #9f1e49;
+  border: 1px solid #ebf0f6;
   border-radius: 5%;
+  background-color: #f7f7f7;
 }
 .rowright-1 {
-  border: 1px solid #fae3e3;
+  border: 1px solid #ebf0f6;
   border-radius: 5%;
 }
 .next {
@@ -131,64 +128,38 @@ body {
   padding: 5px;
   display: block;
   text-align: center;
-  margin: 1% 0%;
-  color: #4e3188;
+  margin: 2% 0%;
+  color: #00587a;
 }
 .daysDeg {
   margin: 5% 0%;
 }
 .sat {
-  color: #eb2632;
+  color: #00587a;
   padding: 0%;
 }
 .sunny {
-  color: #feed30;
-  font-size: 40px;
+  width: 70px;
   font-family: "Roboto", sans-serif;
   padding: 0%;
+  background-color: #d9f2ff;
 }
-.sund {
-  color: #94dd4d;
-}
-.cloud-sun {
-  color: #fce38a;
-  font-size: 40px;
-  font-family: "Roboto", sans-serif;
-  padding: 0%;
-}
-.mon {
-  color: #7dd87d;
-}
-.cloudy {
-  color: #74b49b;
-  font-size: 40px;
-  font-family: "Roboto", sans-serif;
-  padding: 0%;
-}
-.tue {
-  color: #3a91aa;
-}
-.wed {
-  color: #3dbdc2;
-}
-.snowy {
-  color: #79d1c3;
-  font-size: 40px;
-  font-family: "Roboto", sans-serif;
-  padding: 0%;
-}
+
 .bottom-line {
   color: black;
-  text-align: left;
   font-size: 18px;
   font-family: "Roboto", sans-serif;
   padding: 0%;
 }
 .degree .active {
-  color: #b7569a;
+  color: #00587a;
   text-decoration: none;
   cursor: default;
 }
 .degree .active:hover {
   text-decoration: none;
+}
+.form {
+  margin: 2% auto;
+  border: #ebf0f6;
 }
