@@ -24,6 +24,28 @@ function formatDate(date) {
   <br/>  ${hours}:${minutes}`;
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  let forecastHTML = `<div class="col>"`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="row" id="forecast">
+            <div class="col-4 days">${day}</div>
+            <div class="col-4 daysDeg sat">
+              <h1>20 °C</h1>
+              21/18°C
+            </div>
+            <div class="col-4 sunny">☀️</div>
+          </div>`;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function showTemp(response) {
   //console.response.data;
   document.querySelector("#city").innerHTML = response.data.name;
@@ -115,3 +137,4 @@ currentLocationButton.addEventListener("click", getCurrentLocation);
 
 let celsuisTemp = null;
 search("Tehran");
+displayForecast();
