@@ -96,24 +96,20 @@ function convertToCelsius(event) {
   fahrenheitLink.classList.remove("active");
   temperatureElement.innerHTML = Math.round(celsuisTemp);
 }
-//feature 1
+
 let day = document.querySelector("#currentDay");
-//console.log(day);
 let current = new Date();
 day.innerHTML = formatDate(current);
 
-//feature 2
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
-//feature 3
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", convertToFahrenheit);
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", convertToCelsius);
 
-//real weather
 let currentLocationButton = document.querySelector("#current-location");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
