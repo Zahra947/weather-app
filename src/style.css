@@ -4,6 +4,7 @@ h1 {
 }
 body {
   margin: 5% auto;
+  font-family: "Roboto", sans-serif;
 }
 .main {
   padding: 0%;
@@ -27,12 +28,6 @@ body {
   border-radius: 5%;
 }
 
-.cities {
-  font-size: 20px;
-  font-weight: bold;
-  font-family: "Roboto", sans-serif;
-  color: #007cb9;
-}
 .city {
   font-size: 18px;
   font-weight: bold;
@@ -73,10 +68,9 @@ body {
 }
 
 .icon {
-  font-size: 30px;
   display: block;
-  text-align: center;
-  margin: 0%;
+  margin: 0% auto;
+  width: 200px;
   border: 1px solid #fae3e3;
   border-radius: 5%;
 }
@@ -87,7 +81,7 @@ body {
   display: block;
   text-align: center;
   margin: 0%;
-  color: black;
+  color: #b7569a;
   border: 1px solid #fae3e3;
   border-radius: 5%;
   text-decoration: none;
@@ -114,17 +108,7 @@ body {
   border: 1px solid #fae3e3;
   border-radius: 5%;
 }
-.today {
-  font-size: 21px;
-  font-weight: bold;
-  font-family: "Roboto", sans-serif;
-  display: block;
-  text-align: left;
-  margin: 1%;
-  color: #58b3d3;
-  border: 1px solid #fae3e3;
-  border-radius: 5%;
-}
+
 .col-right {
   border: 1px solid #9f1e49;
   border-radius: 5%;
@@ -201,7 +185,7 @@ body {
   padding: 0%;
 }
 .degree .active {
-  color: black;
+  color: #b7569a;
   text-decoration: none;
   cursor: default;
 }
